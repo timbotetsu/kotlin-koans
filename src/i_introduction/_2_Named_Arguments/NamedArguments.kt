@@ -13,15 +13,15 @@ fun usage() {
 }
 
 fun todoTask2(): Nothing = TODO(
-    """
+        """
         Task 2.
         Implement the same logic as in 'task1' again through the library method 'joinToString()'.
         Specify only two of the 'joinToString' arguments.
-    """,
-    documentation = doc2(),
-    references = { collection: Collection<Int> -> task1(collection); collection.joinToString() })
+        """,
+        documentation = doc2(),
+        references = { collection: Collection<Int> -> task1(collection); collection.joinToString() }
+)
 
 fun task2(collection: Collection<Int>): String {
-    todoTask2()
-    return collection.joinToString()
+    return "{" + collection.joinToString() + "}"
 }
